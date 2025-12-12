@@ -1,0 +1,5 @@
+{
+  "fov_deg": {"horizontal": 120.0, "vertical": 63.0},
+  "notes": "Example: initial FOV guess"
+}
+

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "world_points.schema.json",
+  "title": "Surrounding Static Object Points",
+  "type": "object",
+  "properties": {
+    "coordinate_system": {
+      "type": "object",
+      "properties": {
+        "description": {"type": "string"}
+      },
+      "required": ["description"]
+    },
+    "points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": ["string", "number"]},
+          "x": {"type": "number"},
+          "y": {"type": "number"},
+          "z": {"type": "number"},
+          "name": {"type": "string"}
+        },
+        "required": ["id", "x", "y", "z"]
+      },
+      "minItems": 4
+    }
+  },
+  "required": ["points"]
+}
+

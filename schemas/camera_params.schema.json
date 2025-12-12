@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "camera_params.schema.json",
+  "title": "Estimated Camera Parameters",
+  "type": "object",
+  "properties": {
+    "image_size": {
+      "type": "object",
+      "properties": {
+        "width": {"type": "integer"},
+        "height": {"type": "integer"}
+      },
+      "required": ["width", "height"]
+    },
+    "intrinsics": {
+      "type": "object",
+      "properties": {
+        "fx": {"type": "number"},
+        "fy": {"type": "number"},
+        "cx": {"type": "number"},
+        "cy": {"type": "number"},
+        "skew": {"type": "number"}
+      },
+      "required": ["fx", "fy", "cx", "cy", "skew"]
+    },
+    "distortion": {
+      "type": "object",
+      "properties": {
+        "k1": {"type": "number"},
+        "k2": {"type": "number"},
+        "p1": {"type": "number"},
+        "p2": {"type": "number"},
+        "k3": {"type": "number"}
+      }
+    },
+    "extrinsics": {
+      "type": "object",
+      "properties": {
+        "rvec": {"type": "array", "items": {"type": "number"}},
+        "tvec": {"type": "array", "items": {"type": "number"}}
+      },
+      "required": ["rvec", "tvec"]
+    },
+    "reprojection_error_rms": {"type": "number"},
+    "metadata": {"type": "object"}
+  },
+  "required": ["image_size", "intrinsics", "extrinsics"]
+}
+

@@ -1,0 +1,9 @@
+{
+  "coordinate_system": {"description": "Ship: x starboard, y bow, z up; origin at sea surface center"},
+  "points": [
+    {"id": "A", "x": -8.0, "y": -2.0, "z": 3.0, "name": "Port marker"},
+    {"id": "B", "x": 8.0, "y": -2.0, "z": 3.0, "name": "Starboard marker"},
+    {"id": "C", "x": 0.0, "y": 10.0, "z": 3.0, "name": "Bow marker"}
+  ]
+}
+

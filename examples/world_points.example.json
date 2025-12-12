@@ -1,0 +1,10 @@
+{
+  "coordinate_system": {"description": "World: x right, y optical-plane, z up, z=0 sea"},
+  "points": [
+    {"id": "W1", "x": 0.0, "y": 0.0, "z": 0.0, "name": "Sea origin"},
+    {"id": "W2", "x": 5.0, "y": 0.0, "z": 0.0, "name": "Pier A"},
+    {"id": "W3", "x": 0.0, "y": 8.0, "z": 0.0, "name": "Pier B"},
+    {"id": "W4", "x": -4.0, "y": 6.0, "z": 0.0, "name": "Corner"}
+  ]
+}
+

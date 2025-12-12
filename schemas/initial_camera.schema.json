@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "initial_camera.schema.json",
+  "title": "Initial Camera Spec",
+  "type": "object",
+  "properties": {
+    "fov_deg": {
+      "type": "object",
+      "properties": {
+        "horizontal": {"type": "number"},
+        "vertical": {"type": "number"}
+      }
+    },
+    "focal_length_mm": {"type": "number"},
+    "sensor_width_mm": {"type": "number"},
+    "notes": {"type": "string"}
+  }
+}
+

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "reconstruction.schema.json",
+  "title": "2D Sea-Surface Reconstruction",
+  "type": "object",
+  "properties": {
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "frame_index": {"type": "integer"},
+          "timestamp": {"type": ["number", "null"]},
+          "pose": {
+            "type": ["object", "null"],
+            "properties": {
+              "x": {"type": "number"},
+              "y": {"type": "number"},
+              "yaw_deg": {"type": "number"}
+            }
+          },
+          "speed_mps": {"type": ["number", "null"]},
+          "observations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "point_id": {"type": ["string", "number"]},
+                "pixel": {"type": "object", "properties": {"u": {"type": "integer"}, "v": {"type": "integer"}}, "required": ["u", "v"]},
+                "world": {"type": "object", "properties": {"x": {"type": "number"}, "y": {"type": "number"}, "z": {"type": "number"}}, "required": ["x", "y", "z"]}
+              },
+              "required": ["point_id", "pixel", "world"]
+            }
+          }
+        },
+        "required": ["frame_index", "observations"]
+      }
+    },
+    "metadata": {"type": "object"}
+  },
+  "required": ["frames"]
+}
+
